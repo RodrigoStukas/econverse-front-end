@@ -31,7 +31,7 @@ src/
 ├── styles/         # SCSS modular
 ├── index.html      # Ponto de entrada da aplicação
 └── App.tsx         # Componente raiz
-
+```
 
 
 ---
@@ -49,6 +49,7 @@ npm start #Inicie o servidor de desenvolvimento
 
 npm run dev   # Inicia o projeto em modo desenvolvimento (se aplicável)
 npm run build # Gera versão otimizada para produção (se aplicável)
+ ```
 
 ---
 
@@ -68,6 +69,6 @@ npm run build # Gera versão otimizada para produção (se aplicável)
 
 Feito com 💙 por Rodrigo
 
-##📄 Licença
+## 📄 Licença
 
 Este projeto é apenas para fins de avaliação técnica e não possui licença comercial.
