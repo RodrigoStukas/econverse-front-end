@@ -24,13 +24,16 @@ Este projeto foi desenvolvido como parte do processo seletivo para a vaga de **D
 ## 📁 Estrutura de Pastas
 
 ```bash
+
+public/
+├── index.html # Ponto de entrada da aplicação
 src/
 ├── assets/         # Imagens e ícones
 ├── components/     # Componentes reutilizáveis
 ├── pages/          # Página principal
 ├── styles/         # SCSS modular
-├── index.html      # Ponto de entrada da aplicação
 └── App.tsx         # Componente raiz
+
 ```
 
 
