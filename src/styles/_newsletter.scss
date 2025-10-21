@@ -1,0 +1,86 @@
+.newsletter-wrapper {
+  background-color: $roxo-dark;
+  width: 100%;
+  height: 162px;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  color: $white;
+  font-family: $fonte-principal;
+}
+
+.newsletter-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width: 95%;
+  gap: 2rem;
+}
+
+.newsletter-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.25rem;
+  padding-top: 1.5rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: $white;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: $white;
+  }
+}
+
+.newsletter-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-right: 3rem;
+  padding-top: 1.5rem; 
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+
+  input {
+    width: 233px;
+    height: 42px;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: $fonte-principal;
+  }
+
+  button {
+    width: 157px;
+    height: 42px;
+    @include button-style($amarelo, $escuridao);
+
+    &:hover {
+      background-color: darken($amarelo, 10%);
+    }
+  }
+}
+
+.newsletter-termos {
+  font-size: 0.8rem;
+  color: $white;
+  display: flex;
+  align-items: center;
+  font-family: $fonte-principal;
+
+  input {
+    margin-right: 0.5rem;
+    }
+  }

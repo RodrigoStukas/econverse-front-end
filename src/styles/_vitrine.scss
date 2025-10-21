@@ -1,0 +1,240 @@
+.vitrine {
+  padding: 2rem;
+  background-color: $branco;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .vitrine-header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .titulo {
+      @include flex-center;
+      width: 100%;
+      position: relative;
+      margin-bottom: 1rem;
+
+      h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $Azul-claro;
+        background-color: $branco;
+        padding: 0 1rem;
+        z-index: 1;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: $cor-de-linha;
+        position: relative;
+        top: 0.5rem;
+      }
+
+      &::before {
+        margin-right: 1rem;
+      }
+
+      &::after {
+        margin-left: 1rem;
+      }
+    }
+
+    .categorias {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      width: 100%;
+      height: 40px;
+      max-width: 1200px;
+      @include list-reset;
+      margin: 0 auto;
+      padding: 0;
+      background-color: $branco;
+      border: 1px solid $gray-baby;
+      border-radius: 8px;
+      overflow: hidden;
+
+      li {
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $cinza;
+        cursor: pointer;
+        padding: 0.6rem 0;
+        position: relative;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $Azul-claro;
+          font-weight: bold;
+        }
+
+        &:not(:last-child)::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          width: 1px;
+          background-color: $cor-de-linha;
+        }
+      }
+    }
+  }
+
+  .carrossel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+  .nav {
+    width: 32px;
+    height: 32px;
+    font-size: 1.85rem; 
+    background-color: $white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    color: $preto;
+    padding-bottom: 5px;
+    z-index: 1;
+    @include flex-center;
+    @include box-shadow; 
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+    background-color: lighten($white, 5%);
+    transform: scale(1.05);
+  }
+
+    &.prev {
+    margin-right: 1rem;
+  }
+
+    &.next {
+      padding-right: 2px;
+      margin-left: 1rem;
+  }
+}
+
+    .produtos {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 1rem 0;
+      justify-content: center;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $cinza-claro;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+.produto-card {
+  width: 304px;
+  height: 500px;
+  background: $white;
+  border-radius: 12px;
+  padding: 1rem;
+  @include box-shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  align-items: center;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding-top: 3rem;
+
+    img {
+      width: 278.1px;
+      height: 228px;
+      flex-shrink: 0;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: center;
+      gap: 0.2rem;
+
+      p {
+        color: $preto;
+        padding: 10px 0;
+        font-size: 0.95rem;
+        margin: 0;
+      }
+
+      span {
+        padding-top: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: $preto;
+      }
+
+      small {
+        padding-top: 10px;
+        font-weight: 300;
+        font-size: 0.8rem;
+        color: $preto;
+      }
+
+      .frete {
+        color: $card-nome-cor;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .card-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .comprar {
+    width: 275.85px;
+    height: 44px;
+    @include button-style($Azul-claro, $white);
+    
+
+    &:hover {
+      background-color: $azul;
+    }
+  }
+}
+
+.ver-todos {
+  font-weight: 700;
+  color: $preto;
+  cursor: pointer;
+}

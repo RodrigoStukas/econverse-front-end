@@ -1,0 +1,148 @@
+.header {
+  background-color: $cor-de-border;
+  color: $cinza-claro;
+  width: 100%;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+
+  .top-bar {
+    color: $cinza-claro;
+    font-size: 0.75rem;
+    padding: 0.5rem 2rem;
+    text-align: center;
+
+    ul {
+      @include flex-center;
+      gap: 8rem;
+      @include list-reset;
+
+      li {
+        font-weight: 600;
+        @include flex-center;
+        gap: 0.4rem;
+
+        img {
+          @include icon-style(20px);
+          position: relative;
+        }
+
+        strong {
+          color: $roxo-escuro;
+        }
+      }
+    }
+  }
+
+  .main-header {
+    @include flex-between;
+    padding: 0.5rem 2rem;
+
+    .logo {
+      width: 139px;
+      height: 42px;
+      padding-right: 65px;
+    }
+
+    .search-bar {
+      position: relative;
+      flex: 1;
+      margin: 0 2rem;
+
+      input {
+        width: 100%;
+        height: 48px;
+        background-color: $cor-de-disfarce;
+        border-radius: 10px;
+        border: none;
+        padding-left: 1rem;
+        font-family: $fonte-principal;
+
+        &::placeholder {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+          color: $cinza-claro;
+        }
+      }
+
+      .icon-lupa {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include icon-style(28px);
+        pointer-events: none;
+        
+      }
+    }
+
+    .icons {
+      display: flex;
+      gap: 1rem;
+      padding-left: 120px;
+
+      .icon {
+        @include icon-style;
+        background-color: transparent;
+        border: 2px solid transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        @include flex-center;
+
+        img {
+          @include icon-style;
+        }
+
+        &:hover img {
+          @include hover-scale;
+        }
+      }
+    }
+  }
+
+  .nav-menu {
+    background-color: $branco;
+    border-top: 2px solid $cor-de-disfarce;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      @include list-reset;
+      padding: 0.5rem 0;
+
+      li {
+        font-weight: 600;
+        color: $cinza-claro;
+        cursor: pointer;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $roxo-escuro;
+        }
+      }
+
+      .assinatura {
+        @include flex-center;
+        gap: 0.4rem;
+        font-weight: 600;
+        color: $cinza-claro;
+
+        img.icon {
+          @include icon-style(20px);
+        }
+
+        &:hover {
+          color: $roxo-escuro;
+
+        img.icon {
+          transform: scale(1.1);
+          filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(748%) hue-rotate(230deg) brightness(95%) contrast(90%);
+          }  
+        }
+      }
+    }
+  }
+}

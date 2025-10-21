@@ -1,0 +1,48 @@
+.promo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 2rem 2rem 2rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.55) 30%, rgba(0, 0, 0, 0.1) 100%), url('../assets/img/BannerBlackFriday.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .conteudo {
+    max-width: 1440px;
+    max-height: 390px;
+    text-align: left;
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      color: $white;
+
+      strong {
+        font-weight: 700;
+        color: $amarelo;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $white;
+      margin-bottom: 1rem;
+    }
+
+    .ver-produto {
+      @include button-style($amarelo, $roxo-dark);
+      font-size: 1rem;
+      padding: 0.75rem 2.5rem;
+      margin-bottom: 1rem;
+
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($amarelo, 10%);
+      }
+    }
+  }
+}
