@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 import '../styles/Index.scss';
 import coroaIcon from '../assets/icons/Coroa.png';
 import lupaIcon from '../assets/icons/MagnifyingGlass.png';

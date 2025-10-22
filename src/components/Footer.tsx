@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/Index.scss';
 import logo from '../assets/img/econverse-footer.png';
 import instagram from '../assets/icons/instagram.png';

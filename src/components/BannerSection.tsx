@@ -1,4 +1,3 @@
-import React from 'react';
 import banner from '../assets/img/Banner.png';
 import  '../styles/Index.scss';
 
